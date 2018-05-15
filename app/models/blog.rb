@@ -1,6 +1,4 @@
-# モデル
-# すべてのモデルクラスはApplicationRecordクラスを継承している
 class Blog < ApplicationRecord
-  validates :title, presence: true
-  validates :content, presence: true
+  validates :title, presence: true, length: { maximum: 140 }
+  validates :content, presence: true, length: { maximum: 140 }
 end
